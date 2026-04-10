@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#4caf50",
+                    "surface-container": "#eeeeee",
+                    "primary": "#006e1c",
+                    "background": "#f9f9f9",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#3f4a3c",
+                    "on-secondary-container": "#653900",
+                    "on-surface": "#1a1c1c",
+                    "outline-variant": "#becab9",
+                    "inverse-surface": "#2f3131",
+                    "tertiary-fixed": "#ffd9e2",
+                    "on-tertiary-container": "#690034",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#861948",
+                    "on-tertiary-fixed": "#3e001c",
+                    "outline": "#6f7a6b",
+                    "surface-tint": "#006e1c",
+                    "secondary": "#8b5000",
+                    "primary-fixed": "#94f990",
+                    "on-secondary-fixed-variant": "#693c00",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#f26f9d",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffdcbe",
+                    "tertiary-fixed-dim": "#ffb1c7",
+                    "primary-fixed-dim": "#78dc77",
+                    "on-background": "#1a1c1c",
+                    "surface-container-low": "#f3f3f4",
+                    "tertiary": "#a63360",
+                    "surface": "#f9f9f9",
+                    "surface-variant": "#e2e2e2",
+                    "inverse-primary": "#78dc77",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dadada",
+                    "surface-bright": "#f9f9f9",
+                    "secondary-container": "#ff9800",
+                    "on-secondary-fixed": "#2c1600",
+                    "on-primary-fixed": "#002204",
+                    "on-primary-fixed-variant": "#005313",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#003c0b",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb870",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-container-high": "#e8e8e8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* Add padding to account for fixed bottom nav on mobile */
+        .pb-safe { padding-bottom: calc(env(safe-area-inset-bottom) + 5rem); }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl border-b border-zinc-100 dark:border-zinc-800">
+<div class="flex justify-between items-center px-6 h-16 max-w-2xl mx-auto">
+<span class="text-xl font-extrabold bg-gradient-to-br from-green-700 to-green-500 bg-clip-text text-transparent">Cardápio Digital</span>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors p-2 rounded-full">notifications</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUOLJ19AB35JhjKmrPaag6jqWGeQKRDCOyGdOtpFnsJhtUwUIYnioZFacAyNZe1od2OXL5uu1FPicn6-2pdnCwZSw8cXs8DqpA2JQHzHFXlH6lLEVG2VH6BMuokBmcBiNzA5ztZO98D77epDt3j_AMtRjL3V-u2RbjI0mb3dZU5FozQWI04x4lW7sXwSw3oWhXFcSzi3SWz3hpE4mfsv4JUKh3vADc6I6Qg7_Wz9I4FW4flS-_OKuh4eZpXGzEbjONdlfvMeBJjg"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 px-6 pb-safe max-w-2xl mx-auto">
+<section class="mb-10 text-center">
+<h1 class="text-on-surface font-headline font-bold text-lg mb-2">Média Geral</h1>
+<div class="flex flex-col items-center gap-1">
+<div class="text-6xl font-extrabold text-on-surface tracking-tighter">4.8</div>
+<div class="flex gap-0.5 mb-1">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 0;">star_rate</span>
+</div>
+<p class="text-zinc-500 text-sm font-medium">Baseado em 124 avaliações esta semana</p>
+</div>
+</section>
+<section class="flex flex-wrap gap-2 mb-10 justify-center">
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full text-xs font-bold transition-all shadow-md">Todas</button>
+<button class="bg-surface-container-high text-on-surface-variant px-5 py-2 rounded-full text-xs font-semibold hover:bg-zinc-200 transition-colors">Pratos</button>
+<button class="bg-surface-container-high text-on-surface-variant px-5 py-2 rounded-full text-xs font-semibold hover:bg-zinc-200 transition-colors">Lanches</button>
+<button class="bg-surface-container-high text-on-surface-variant px-5 py-2 rounded-full text-xs font-semibold hover:bg-zinc-200 transition-colors">Bebidas</button>
+</section>
+<section class="space-y-6">
+<h2 class="text-on-surface font-headline font-bold text-xl px-2">Avaliações Recentes</h2>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-zinc-100 dark:border-zinc-800 transition-transform active:scale-[0.98]">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-sm">LM</div>
+<div>
+<h3 class="font-bold text-on-surface text-sm">Lucas Mendes</h3>
+<span class="text-[10px] text-zinc-400 font-semibold uppercase tracking-wider">Há 15 minutos</span>
+</div>
+</div>
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">O strogonoff de hoje estava sensacional! A carne estava muito macia e o tempero no ponto certo. Melhor refeição da semana.</p>
+<div class="inline-flex items-center gap-1.5 bg-surface-container-low px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-primary text-[16px]">restaurant</span>
+<span class="text-[11px] font-bold text-primary">Strogonoff de Frango</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-zinc-100 dark:border-zinc-800">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold text-sm">AR</div>
+<div>
+<h3 class="font-bold text-on-surface text-sm">Ana Rocha</h3>
+<span class="text-[10px] text-zinc-400 font-semibold uppercase tracking-wider">Há 1 hora</span>
+</div>
+</div>
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 0;">star_rate</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">A salada de frutas estava bem fresca, mas achei que poderia ter mais variedade de frutas da estação.</p>
+<div class="inline-flex items-center gap-1.5 bg-surface-container-low px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-primary text-[16px]">nutrition</span>
+<span class="text-[11px] font-bold text-primary">Salada de Frutas</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-zinc-100 dark:border-zinc-800">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-bold text-sm">JP</div>
+<div>
+<h3 class="font-bold text-on-surface text-sm">João Pedro</h3>
+<span class="text-[10px] text-zinc-400 font-semibold uppercase tracking-wider">Há 3 horas</span>
+</div>
+</div>
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">O suco de laranja natural está perfeito hoje! Muito gelado e sem açúcar, do jeito que eu gosto.</p>
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 border border-zinc-100">
+<img alt="Fresh orange juice" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2N2ZbC0Fn-hfC3A67G7LhfMJVJHIgPdgOPegqIZPxC4ApdI-tsrNSQwvnHWa86riVsIHTmCxAKX1CqUcenepE6X2eIVH60MmaJhpm78yWa1V524YNk9P85Da4A3rSJPc7RYys-0kZUScqhZPBMavGx-ONjH5vsT6np96AvPYEf6WYkmDyo90-S4FLVj7MpXxnWJUitzCKxxoKQnhCyEYM1bOQTm02zKATG_R7ByQUuC7fyeCGjDLoLIlAbhAzaQucAP5eCHjHew"/>
+</div>
+<div class="flex flex-col justify-center">
+<div class="inline-flex items-center gap-1.5 bg-surface-container-low px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-primary text-[16px]">local_bar</span>
+<span class="text-[11px] font-bold text-primary">Suco de Laranja</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 w-full bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl border-t border-zinc-100 dark:border-zinc-800 z-50">
+<div class="max-w-2xl mx-auto flex justify-around items-end px-2 py-3 pb-safe">
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 w-16 py-1 hover:text-primary transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 w-16 py-1 hover:text-primary transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1">restaurant_menu</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Menu</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary/10 dark:bg-primary/20 text-primary rounded-2xl w-20 py-2 -translate-y-1 shadow-sm transition-transform" href="#">
+<span class="material-symbols-outlined mb-0.5" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+<span class="text-[10px] font-extrabold uppercase tracking-tighter">Avaliações</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 w-16 py-1 hover:text-primary transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1">chat_bubble</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Sugestões</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 w-16 py-1 hover:text-primary transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Perfil</span>
+</a>
+</div>
+</nav>
+</body></html>
