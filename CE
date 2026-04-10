@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#4caf50",
+                    "surface-container": "#eeeeee",
+                    "primary": "#006e1c",
+                    "background": "#f9f9f9",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#3f4a3c",
+                    "on-secondary-container": "#653900",
+                    "on-surface": "#1a1c1c",
+                    "outline-variant": "#becab9",
+                    "inverse-surface": "#2f3131",
+                    "tertiary-fixed": "#ffd9e2",
+                    "on-tertiary-container": "#690034",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#861948",
+                    "on-tertiary-fixed": "#3e001c",
+                    "outline": "#6f7a6b",
+                    "surface-tint": "#006e1c",
+                    "secondary": "#8b5000",
+                    "primary-fixed": "#94f990",
+                    "on-secondary-fixed-variant": "#693c00",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#f26f9d",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffdcbe",
+                    "tertiary-fixed-dim": "#ffb1c7",
+                    "primary-fixed-dim": "#78dc77",
+                    "on-background": "#1a1c1c",
+                    "surface-container-low": "#f3f3f4",
+                    "tertiary": "#a63360",
+                    "surface": "#f9f9f9",
+                    "surface-variant": "#e2e2e2",
+                    "inverse-primary": "#78dc77",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dadada",
+                    "surface-bright": "#f9f9f9",
+                    "secondary-container": "#ff9800",
+                    "on-secondary-fixed": "#2c1600",
+                    "on-primary-fixed": "#002204",
+                    "on-primary-fixed-variant": "#005313",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#003c0b",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb870",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-container-high": "#e8e8e8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-header { backdrop-filter: blur(20px); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-sm h-16 flex justify-between items-center px-4 md:px-6">
+<div class="text-lg md:text-xl font-extrabold bg-gradient-to-br from-green-700 to-green-500 bg-clip-text text-transparent font-['Plus_Jakarta_Sans'] tracking-tight shrink-0">
+            Cardápio Digital
+        </div>
+<div class="flex items-center gap-2 md:gap-4">
+<button class="p-2 text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors rounded-full active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-9 h-9 md:w-10 md:h-10 rounded-full overflow-hidden bg-surface-container-high shrink-0">
+<img alt="User profile photo" data-alt="Portrait of a friendly male user with a smiling expression, soft studio lighting, modern minimalist style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwh1LnctcuQA4gOjxj2jU1jUUQ7rPkMyS2XujOY4iTYAHH67YQyrcSxAX6NNccTSBryQacj6XeAipgzwoJqGnrs5HE5x8QdOY5CXjy3PCAkff-WB94MwOw29eZV7dVz9EMPlkGDFpBoor212bJx-RNXw337_ojiZujm_whK3YcIUPGsm6EbSMGoV5Qa7Rb6tTZjZnY9RyV8COgVXomzziD-O6Lfu45p2QNowXkpJuaiuFM4Qh1fkPVFW6kvWqVbummAHg9o7eG2w"/>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pt-24 px-6 space-y-8 pb-40">
+<!-- Greeting Section -->
+<section class="space-y-2">
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface">Confira o cardápio de hoje 😋</h1>
+<p class="text-on-surface-variant font-medium">Quinta-feira, 24 de Outubro</p>
+</section>
+<!-- Week Day Selector (Highlighting Today) -->
+<div class="flex gap-3 overflow-x-auto hide-scrollbar -mx-6 px-6">
+<div class="flex flex-col items-center justify-center min-w-[64px] h-20 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="text-xs font-bold opacity-60">SEG</span>
+<span class="text-lg font-extrabold">21</span>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[64px] h-20 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="text-xs font-bold opacity-60">TER</span>
+<span class="text-lg font-extrabold">22</span>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[64px] h-20 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="text-xs font-bold opacity-60">QUA</span>
+<span class="text-lg font-extrabold">23</span>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[72px] h-24 rounded-lg bg-gradient-to-br from-primary to-primary-container text-on-primary shadow-lg shadow-primary/20 -mt-2">
+<span class="text-xs font-bold">QUI</span>
+<span class="text-2xl font-black">24</span>
+<div class="w-1 h-1 bg-white rounded-full mt-1"></div>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[64px] h-20 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="text-xs font-bold opacity-60">SEX</span>
+<span class="text-lg font-extrabold">25</span>
+</div>
+</div>
+<!-- Meals Section -->
+<section class="space-y-8">
+<!-- Morning Snack -->
+<div class="group bg-surface-container-lowest p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-4 transition-all hover:translate-y-[-2px]">
+<div class="w-20 h-20 rounded-lg bg-orange-100 flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Glass bottle of fresh whole milk and a small bowl of natural yogurt on a bright wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2IrAW2Z8dmNJBvFkSnVtuT2SJEjVz4pU2olZhv6SZaJHU_7utRpauUnq0IIUguhaAkBDv0rr_9-E7OFDOsT5wgbThsVEvGeadmGFtVTUgRFs9wMFm0Ie1P6QhpYymFKSmNQp0KY1lc72eIPlRl2FxKnyc_YJRb90m9BILf1DGxFqd3ovXeMApK_JdQUi2BP6NWHZiMoE5930ujClswENoXiOeF-Da8iKo3j5MnUVi6q154m7jq4qIlAFzbKMSCx5pkac7lxSByg"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-secondary-container/10 text-on-secondary-container text-[10px] font-bold uppercase tracking-widest rounded-full">Lanche da Manhã</span>
+</div>
+<h3 class="font-bold text-lg text-on-surface">Iogurte com Frutas</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2">Iogurte natural batido com morangos frescos e mel.</p>
+</div>
+</div>
+<!-- Lunch (Featured) -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all hover:scale-[1.01]">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Vibrant healthy salad bowl with roasted chicken, avocado, chickpeas, and fresh greens, bright natural lighting, professional food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5wiUVX1gwQrxm0X0aEZ-nNMvNQ_S-dzGM2lJpw9_1QIknFqiigOfPdI415PvddFFvz4xAyfTIx86ZRtl1QxupDy0od1KdxXRghEbRa0YppTb-gyAD_umItekSj3Mw3uGUQRM3U08ESNvC7yi2nrxrTg2YY4kGHeMf0jjZBiHUYaiJvvCpzrxuzg5BNnZablPJHs2N9U9wOJnr25OBXmx-Ztbg2oONYL3DSbxlX9xY0zkJV0_j8woLgt3jVkwtQqkVdQTVPJXs7Q"/>
+<div class="absolute top-4 left-4">
+<span class="px-4 py-1.5 bg-primary/90 text-white text-xs font-bold uppercase tracking-widest rounded-full backdrop-blur-md">Destaque do Dia</span>
+</div>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start gap-4">
+<div class="min-w-0">
+<span class="text-primary font-bold text-sm uppercase tracking-widest">Almoço</span>
+<h2 class="text-2xl font-black text-on-surface mt-1 leading-tight">Bowl Mediterrâneo de Frango</h2>
+</div>
+<div class="bg-surface-container-low px-3 py-1 rounded-lg shrink-0">
+<span class="text-xs font-bold text-on-surface-variant tracking-tighter">480 kcal</span>
+</div>
+</div>
+<p class="text-on-surface-variant leading-relaxed">
+                        Peito de frango grelhado, quinoa temperada, grão-de-bico crocante, abacate fatiado e mix de folhas verdes com molho cítrico.
+                    </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="text-[10px] font-bold px-3 py-1 bg-surface-container-high rounded-full text-on-surface-variant whitespace-nowrap">SEM GLÚTEN</span>
+<span class="text-[10px] font-bold px-3 py-1 bg-surface-container-high rounded-full text-on-surface-variant whitespace-nowrap">ALTO EM PROTEÍNA</span>
+</div>
+</div>
+</div>
+<!-- Afternoon Snack -->
+<div class="group bg-surface-container-lowest p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-4 transition-all hover:translate-y-[-2px]">
+<div class="w-20 h-20 rounded-lg bg-green-50 flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Selection of sliced tropical fruits including mango and kiwi on a minimalist white ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb-UPXRsbQlSI9BvxI2P_twA7dKhaZguokSbEJxpj8elZp88SRrbCu_-n27ksEoug81Ot5i51x72enIdTvxBgWBFj--iRFcpBa3tlrTklhfP-WxrV8USqd-rQsFeEN9iYXtf-MSVG7iMGKMOfdrwccyxALFndXhV-20njoGTrDjN8DyU0Od8xFejJDvqvcACvy60XKadONymvehEP0Mp506lc-HxeByXBHn0bDjrl1cN0JMYrxCmM-0xwxScjlLZMFZ9s1f6QKpQ"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-primary-container/10 text-on-primary-container text-[10px] font-bold uppercase tracking-widest rounded-full">Lanche da Tarde</span>
+</div>
+<h3 class="font-bold text-lg text-on-surface">Frutas Tropicais</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2">Mix de manga, kiwi e melancia picadinha.</p>
+</div>
+</div>
+</section>
+<!-- Suggestions Banner -->
+<section class="bg-secondary-container/10 p-8 rounded-lg relative overflow-hidden">
+<div class="relative z-10 space-y-3">
+<h4 class="text-xl font-bold text-on-secondary-container">Sentiu falta de algo?</h4>
+<p class="text-sm text-on-secondary-container/80 leading-relaxed max-w-[200px]">Envie suas sugestões para novos pratos no cardápio escolar.</p>
+<button class="bg-gradient-to-br from-secondary to-secondary-container text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg shadow-secondary/20 active:scale-95 transition-transform">
+                    Sugerir Prato
+                </button>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[120px] text-secondary/10 rotate-12 pointer-events-none">restaurant</span>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-white/90 dark:bg-zinc-950/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-[3rem] z-50">
+<!-- Home Active -->
+<a class="flex flex-col items-center justify-center bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full px-4 py-2 active:scale-90 transition-transform cubic-bezier(0.175, 0.885, 0.32, 1.275)" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-semibold uppercase tracking-wider">Home</span>
+</a>
+<!-- Menu -->
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-2 hover:text-green-600 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="text-[10px] font-semibold uppercase tracking-wider">Menu</span>
+</a>
+<!-- Assessments -->
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-2 hover:text-green-600 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">star_rate</span>
+<span class="text-[10px] font-semibold uppercase tracking-wider">Avaliar</span>
+</a>
+<!-- Suggestions -->
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-2 hover:text-green-600 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-semibold uppercase tracking-wider">Sugerir</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-2 hover:text-green-600 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-semibold uppercase tracking-wider">Perfil</span>
+</a>
+</nav>
+</body></html>
